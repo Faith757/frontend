@@ -8,7 +8,7 @@ loginForm.addEventListener("submit", async function (e) {
     const password = document.getElementById("pwd").value;
 
     try {
-        const response = await fetch(`${API_KEY}/user/login`, {
+        const response = await fetch(`${API_KEY}/login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
