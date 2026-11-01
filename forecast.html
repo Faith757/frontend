@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>forecast</title>
+  <link
+    href="bootstrap-6.0.0-alpha.1-dist/bootstrap-6.0.0-alpha.1-dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+  <nav class="nav2 bg-muted-accent">
+    <div class="d-flex align-items-center gap-2">
+      <img src="image/sun.svg" class="img-fluid object-fit-contain mt-5" style="width: 20px; height: 20px">
+      <h4 class="mb-5">SkyCast</h4>
+    </div>
+      <p class="mb-0 mt-5"><a href="forecast.html" class="text-decoration-none fg-white fw-semibold">Current Weather</a></p>
+      <p class="mb-0 mt-5"><a href="index.html" class="text-decoration-none fg-white">Logout</a></p>
+  </nav>
+  <nav class="bg-subtle-accent position-fixed top-0 nav1" style="width: 200px; height: 100vh">
+    <div class="d-flex align-items-center gap-3 ms-8">
+      <img src="image/sun.svg" class="img-fluid object-fit-contain mt-6" style="width: 30px; height: 30px">
+      <h4>SkyCast</h4>
+    </div>
+    <div class="d-flex align-items-start justify-content-center gap-3 mt-10 rounded-4 bg-accent mx-2 py-2 px-4">
+      <a href="forecast.html">
+        <img src="image/home.svg" class="img-fluid object-fit-contain" style="width: 15px; height: 15px">
+      </a>
+      <p class="mb-0 pt-1"><a href="forecast.html" class="text-decoration-none fg-white fw-semibold">Current Weather</a></p>
+    </div>
+    <div class="d-flex align-items-center gap-3 mt-10 ms-6">
+      <a href="index.html">
+        <img src="image/logout.svg" class="img-fluid object-fit-contain" style="width: 15px; height: 15px">
+      </a>
+      <p class="mb-0"><a href="index.html" class="text-decoration-none fg-white">Logout</a></p>
+    </div>
+    <div class="d-flex align-items-start gap-3 p-5" style="margin-top: 250px;">
+      <img src="image/sun1.svg" class="img-fluid object-fit-contain mt-2" style="width: 20px; height: 20px">
+      <div>
+        <p class="mb-0">SkyCast</p>
+        <p class="mb-0 fg-secondary">Your daily weather companion</p>
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="mt-6 d-flex align-items-center head" style="margin-left: 220px; gap: 520px">
+      <div>
+        <h3>Weather Dashboard</h3>
+        <p class="fg-secondary">Check the current weather conditions in your city and other cities</p>
+      </div>
+      <div class="d-flex align-items-center gap-3 border rounded-4 p-1 bg-muted-secondary border-accent px-2 live">
+        <img src="image/green-circle.svg" class="img-fluid object-fit-contain" style="width: 10px; height: 10px">
+        <p class="mb-0">Live Weather</p>
+      </div>
+    </div>
+    <form id="weather-form" style="margin-left: 220px;" class="d-flex align-items-center">
+      <div class="name position-relative">
+        <img src="image/search2.svg" class="img-fluid object-fit-contain" style="width: 20px; height: 20px">
+        <input type="text" id="searchInput" placeholder="Search for a city...">
+      </div>
+      <button type="submit" class="rounded-4 border-0 bg-accent fs-lg" style="padding: 10px; width: 150px">search</button>
+    </form>
+    <div style="margin-left: 220px" class="bg-muted-accent p-5 rounded-4 fore">
+      <div class="d-flex align-items-center gap-10">
+        <div class="border-end bod">
+          <div class="d-flex align-items-center gap-5">
+            <img src="image/location.svg" class="img-fluid object-fit-contain" style="width: 20px; height: 20px">
+            <div class="mt-3">
+              <p id="weathercity" class="mb-0 text-2xl">City</p>
+              <p id="weathercountry" class="mb-0">Country</p>
+            </div>
+          </div>
+          <div class="d-flex align-items-center gap-0" style="height: 150px">
+            <p id="weathertemp" class="fs-6xl text fw-semibold mb-0">Temp°C</p>
+            <img src="image/clouds.svg" class="img-fluid object-fit-contain" style="width: 200px; height:150px"
+            id="weathericon">
+          </div>
+          <p id="weatherdesc" class="mb-0 text-xl fw-semibold">Description</p>
+          <p id="weathermain" class="mb-0">Main Weather</p>
+        </div>
+        <div>
+          <div class="mb-12">
+            <p class="mb-0 text-2xl fg-secondary">min_temp</p>
+            <p id="min_temp" class="text-4xl fw-semibold">0°C</p>
+          </div>
+          <div>
+            <p class="mb-0 text-2xl fg-secondary">max_temp</p>
+            <p id="max_temp" class="text-4xl fw-semibold">0°C</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-left: 220px" class="details">
+      <div class="mt-8">
+        <h3 class="mb-0">Weather Details</h3>
+        <p class="fg-secondary">Current atmospheric conditions</p>
+      </div> 
+      <div class="d-flex align-items-center mb-5 gap-11 details1">
+        <div class="border rounded-4 p-6">
+          <img src="image/humidity.svg" class="img-fluid object-fit-contain" style="width: 30px; height: 30px">
+          <p class="fg-secondary mb-0">Humidity</p>
+          <p class="mb-0 text-3xl" id="humidity">0%</p>
+          <p class="fg-secondary">Moisture in the air</p>
+        </div>
+        <div class="border rounded-4 p-6">
+          <img src="image/windspeed.svg" class="img-fluid object-fit-contain" style="width: 30px; height: 30px">
+          <p class="fg-secondary mb-0">Windspeed</p>
+          <p class="mb-0 text-3xl" id="speed">0m/s</p>
+          <p class="fg-secondary">Current wind speed</p>
+        </div>
+        <div class="border rounded-4 p-6">
+          <img src="image/pressure.svg" class="img-fluid object-fit-contain" style="width: 30px; height: 30px">
+          <p class="fg-secondary mb-0">Pressure</p>
+          <p class="mb-0 text-3xl" id="pressure">0hPa</p>
+          <p class="fg-secondary">atmospheric pressure</p>
+        </div>
+        <div class="border rounded-4 p-6">
+          <img src="image/feelslike.svg" class="img-fluid object-fit-contain" style="width: 30px; height: 30px">
+          <p class="fg-secondary mb-0">Feels Like</p>
+          <p class="mb-0 text-3xl" id="weatherfeel">0°</p>
+          <p class="fg-secondary">Perceived temperature</p>
+        </div>
+        <div class="border rounded-4 p-6">
+          <img src="image/visibility.svg" class="img-fluid object-fit-contain" style="width: 30px; height: 30px">
+          <p class="fg-secondary mb-0">Visibility</p>
+          <p class="mb-0 text-3xl" id="visibility">0km</p>
+          <p class="fg-secondary">Reported visibility</p>
+        </div>
+      </div>
+    </div>
+    <footer class="pt-12">
+      <div class="d-flex align-items-center gap-5 border-top justify-content-center pt-3">
+        <p class="border-end pe-5">SkyCast © 2026</p>
+        <p>Powered by OpenWeather</p>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

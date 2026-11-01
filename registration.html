@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>registration</title>
+    <link
+      href="bootstrap-6.0.0-alpha.1-dist/bootstrap-6.0.0-alpha.1-dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body class="body">
+    <form id="register-form">
+      <div
+        class="container bg-muted-accent rounded-4 register"
+        style="width: 500px"
+      >
+        <div class="d-flex align-items-center justify-content-center flex-column">
+          <img
+            src="image/sun.svg"
+            class="img-fluid object-fit-contain"
+            id="logo"
+            style="width: 80px; height: 80px"
+          />
+          <h4 class="text-3xl">Sign Up</h4>
+        </div>
+        <div class="position-relative name">
+          <img
+            src="image/email.svg"
+            class="img-fluid object-fit-contain"
+            style="width: 20px; height: 20px"
+          />
+          <input type="email" id="email" placeholder="Enter email" /><br />
+        </div>
+        <div class="position-relative name">
+          <img
+            src="image/password.svg"
+            class="img-fluid object-fit-contain"
+            style="width: 20px; height: 20px"
+          />
+          <input type="password" id="pwd" placeholder="Enter password" /><br />
+        </div>
+        <div class="position-relative name">
+          <img
+            src="image/password.svg"
+            class="img-fluid object-fit-contain"
+            style="width: 20px; height: 20px"
+          />
+          <input type="password" id="password" placeholder="Confirm password" /><br />
+        </div>
+        <button type="submit" id="btn" class="bg-accent fw-bold">register</button>
+        <div class="d-flex align-items-center mx-4 gap-5">
+          <p>Already have an account?</p>
+          <p>
+            <a href="login.html" class="text-decoration-none fw-bolder">Log in</a>
+          </p>
+        </div>
+      </div>
+    </form>
+
+    <script src="bootstrap-6.0.0-alpha.1-dist/bootstrap-6.0.0-alpha.1-dist/js/bootstrap.bundle.js"></script>
+    <script src="register.js"></script>
+  </body>
+</html>

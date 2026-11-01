@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkyCast</title>
+    <link
+      href="bootstrap-6.0.0-alpha.1-dist/bootstrap-6.0.0-alpha.1-dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="d-none rounded open overflow-scroll mx-4" id="home">
+      <div class="d-flex align-items-center gap-3">
+        <img
+          src="image/sun.svg"
+          class="img-fluid object-fit-contain"
+          style="width: 30px; height: 30px"
+        />
+        <a class="navbar-brand" href="#">SkyCast</a>
+      </div>
+      <ul class="d-flex mt-7">
+        <li class="nav-item ms-5">
+          <a href="">
+            <img
+              src="image/house.svg"
+              class="img-fluid object-fit-contain"
+              style="width: 30px; height: 30px"
+            />
+          </a>
+          <a
+            class="nav-link active"
+            aria-current="page"
+            href="index.html"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item ms-5">
+          <a href="#features">
+            <img
+              src="image/star.svg"
+              class="img-fluid object-fit-contain"
+              style="width: 30px; height: 30px"
+            />
+          </a>
+          <a class="nav-link" href="#features">Features</a>
+        </li>
+        <li class="nav-item ms-5">
+          <a href="login.html">
+            <img
+              src="image/weather.svg"
+              class="img-fluid object-fit-contain"
+              style="width: 30px; height: 30px"
+            />
+          </a>
+          <a class="nav-link" href="forecast.html" target="_blank">Forecasts</a>
+        </li>
+        <li class="nav-item ms-5">
+          <a href="#about">
+            <img
+              src="image/about.svg"
+              class="img-fluid object-fit-contain"
+              style="width: 30px; height: 30px"
+            />
+          </a>
+          <a href="#about" class="nav-link">About</a>
+        </li>
+      </ul>
+      <div class="d-flex gap-4 mt-5">
+        <a href="login.html"
+          ><button type="button" class="btn btn-outline theme-accent">
+            login
+          </button></a
+        >
+        <a href="registration.html"
+          ><button type="button" class="btn btn-solid theme-inverse">
+            sign up
+          </button></a
+        >
+      </div>
+    </nav>
+    <nav class="navbar sm:navbar-expand bg-1 fg-2 container-fluid p-6 close" id="home">
+      <div class="container-fluid">
+        <div class="d-flex align-items-center gap-3">
+          <img
+            src="image/sun.svg"
+            class="img-fluid object-fit-contain"
+            style="width: 30px; height: 30px"
+          />
+          <a class="navbar-brand" href="#">SkyCast</a>
+        </div>
+        <button
+          class="btn-icon navbar-toggler"
+          type="button"
+          data-bs-toggle="drawer"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon" aria-hidden="true"></span>
+        </button>
+        <dialog
+          class="drawer drawer-end"
+          tabindex="-1"
+          id="navbarNav"
+          aria-labelledby="navbarNavLabel"
+        >
+          <div class="drawer-header">
+            <h5 class="drawer-title" id="navbarNavLabel">Menu</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="drawer"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="drawer-body">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item ms-5">
+                <a href="">
+                  <img
+                    src="image/house.svg"
+                    class="img-fluid object-fit-contain"
+                    style="width: 30px; height: 30px"
+                  />
+                </a>
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item ms-5">
+                <a href="#features">
+                  <img
+                    src="image/star.svg"
+                    class="img-fluid object-fit-contain"
+                    style="width: 30px; height: 30px"
+                  />
+                </a>
+                <a class="nav-link" href="#features">Features</a>
+              </li>
+              <li class="nav-item ms-5">
+                <a href="login.html">
+                  <img
+                    src="image/weather.svg"
+                    class="img-fluid object-fit-contain"
+                    style="width: 30px; height: 30px"
+                  />
+                </a>
+                <a class="nav-link" href="login.html"
+                  >Forecasts</a
+                >
+              </li>
+              <li class="nav-item ms-5">
+                <a href="#about">
+                  <img
+                    src="image/about.svg"
+                    class="img-fluid object-fit-contain"
+                    style="width: 30px; height: 30px"
+                  />
+                </a>
+                <a href="#about" class="nav-link">About</a>
+              </li>
+            </ul>
+            <a href="login.html"
+              ><button type="button" class="btn btn-outline theme-accent">
+                login
+              </button></a
+            >
+            <a href="registration.html"
+              ><button type="button" class="btn btn-solid theme-inverse">
+                sign up
+              </button></a
+            >
+          </div>
+        </dialog>
+      </div>
+    </nav>
+    <div class="container-fluid bg-muted-accent border-bottom">
+      <div class="d-flex align-items-center justify-content-center flex-column">
+        <h3 class="text-6xl font-body pb-0 pt-12 text-center">
+          Understand the weather
+        </h3>
+        <h3 class="text-6xl font-body text-center">plan your day</h3>
+        <div
+          class="d-flex align-items-center justify-content-center gap-7 mt-7 none"
+        >
+          <div
+            class="border p-5 bg-subtle-accent rounded-4"
+            style="width: 150px"
+          >
+            <div class="d-flex align-items-center gap-3">
+              <img
+                src="image/sun.svg"
+                class="img-fluid object-fit-cover"
+                style="width: 50px; height: 50px"
+              />
+              <h4 class="text-center mb-0">28°C</h4>
+            </div>
+            <p class="text-center mb-0">Sunny</p>
+          </div>
+          <div
+            class="border p-5 bg-subtle-accent rounded-4"
+            style="width: 150px"
+          >
+            <div class="d-flex align-items-center gap-3">
+              <img
+                src="image/rain.svg"
+                class="img-fluid object-fit-cover"
+                style="width: 50px; height: 50px"
+              />
+              <h4 class="text-center mb-0">8°C</h4>
+            </div>
+            <p class="text-center mb-0">Rainy</p>
+          </div>
+          <div
+            class="border p-5 bg-subtle-accent rounded-4"
+            style="width: 150px"
+          >
+            <div class="d-flex align-items-center gap-3">
+              <img
+                src="image/wind.svg"
+                class="img-fluid object-fit-cover"
+                style="width: 50px; height: 50px"
+              />
+              <h4 class="text-center mb-0">12°C</h4>
+            </div>
+            <p class="text-center mb-0">Windy</p>
+          </div>
+          <div
+            class="border p-5 bg-subtle-accent rounded-4"
+            style="width: 150px"
+          >
+            <div class="d-flex align-items-center gap-3">
+              <img
+                src="image/storm.svg"
+                class="img-fluid object-fit-cover"
+                style="width: 50px; height: 50px"
+              />
+              <h4 class="text-center mb-0">10°C</h4>
+            </div>
+            <p class="text-center mb-0">Stormy</p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="d-flex align-items-center justify-content-center gap-5 pt-10 pb-10"
+      >
+        <a href="registration.html"
+          ><button type="button" class="btn btn-solid theme-inverse">
+            get started for free
+          </button></a
+        >
+      </div>
+    </div>
+    <div class="mt-12">
+      <p class="text-center">how it works</p>
+      <h2 class="mb-10 text-center text-4xl">
+        Get Started in Three Simple Steps
+      </h2>
+      <div class="d-flex align-items-center justify-content-center gap-5 step">
+        <div
+          class="border p-5 bg-muted-secondary border-accent rounded-4 steps"
+          style="width: 300px; height: 250px"
+        >
+          <div
+            class="d-flex align-items-center justify-content-center flex-column"
+          >
+            <img
+              src="image/create.svg"
+              class="img-fluid object-fit-contain"
+              style="width: 80px; height: 80px"
+            />
+            <h3 class="pb-6">Step 1</h3>
+          </div>
+          <h4 class="fw-bold">Create an account</h4>
+          <p>Register using the information the application requires.</p>
+        </div>
+        <div
+          class="border p-5 bg-muted-secondary border-primary rounded-4 steps"
+          style="width: 300px; height: 250px"
+        >
+          <div
+            class="d-flex align-items-center justify-content-center flex-column"
+          >
+            <img
+              src="image/login.svg"
+              class="img-fluid object-fit-contain"
+              style="width: 80px; height: 80px"
+            />
+            <h3 class="pb-6">Step 2</h3>
+          </div>
+          <h4 class="fw-bold">Log In</h4>
+          <p>Sign in and access your account securely.</p>
+        </div>
+        <div
+          class="border p-5 bg-muted-secondary border-success rounded-4 steps"
+          style="width: 300px; height: 250px"
+        >
+          <div
+            class="d-flex align-items-center justify-content-center flex-column"
+          >
+            <img
+              src="image/explore.svg"
+              class="img-fluid object-fit-contain"
+              style="width: 80px; height: 80px"
+            />
+            <h3 class="pb-6">Step 3</h3>
+          </div>
+          <h4 class="fw-bold">Explore the Weather</h4>
+          <p>
+            Search for cities and view available weather conditions and
+            forecasts
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="features bg-muted-accent p-5 pb-12 border-bottom border-secondary"
+      id="features"
+    >
+      <h3 class="text-4xl text-center mb-0 mt-12">Features of SkyCast</h3>
+      <div class="grid grid-cols-3 feature">
+        <div
+          class="mt-8 p-5 bg-subtle-accent mx-4 rounded-4 shadow text-start box"
+        >
+          <div
+            class="d-flex align-items-center justify-content-center gap-3 mb-6"
+          >
+            <img
+              src="image/weather1.svg"
+              class="img-fluid object-fit-contain"
+              style="width: 30px; height: 30px"
+            />
+            <h4>Current Weather</h4>
+          </div>
+          <p>
+            View the current temperature, weather condition and other available
+            weather details for a selected location.
+          </p>
+        </div>
+        <div
+          class="mt-8 p-5 bg-subtle-accent mx-4 rounded-4 shadow text-start box"
+        >
+          <div
+            class="d-flex align-items-center gap-3 justify-content-center mb-6"
+          >
+            <img
+              src="image/search.svg"
+              class="img-fluid object-fit-contain"
+              style="width: 30px; height: 30px"
+            />
+            <h4>Search for Any City</h4>
+          </div>
+          <p>
+            Search for supported cities/countries and check their daily weather
+            condition.
+          </p>
+        </div>
+        <div
+          class="mt-8 p-5 bg-subtle-accent mx-4 rounded-4 shadow text-start box"
+        >
+          <div
+            class="d-flex align-items-center gap-3 justify-content-center mb-6"
+          >
+            <img
+              src="image/wind.svg"
+              class="img-fluid object-fit-contain"
+              style="width: 30px; height: 30px"
+            />
+            <h4>Detailed Weather Information</h4>
+          </div>
+          <p>
+            View information such as humidity, atmospheric pressure, wind speed,
+            min temp and max temp when available.
+          </p>
+        </div>
+      </div>
+    </div>
+    <h3 class="text-4xl mx-4 text-center faq">FAQs</h3>
+    <div class="d-flex align-items-center gap-12" id="faq">
+      <div>
+        <div class="mx-4 p-5">
+          <p class="mb-0">Q: What is this weather app?</p>
+          <p class="mb-0">
+            A: It is a web application that provides weather information and
+            forecasts for supported locations.
+          </p>
+        </div>
+        <div class="mx-4 p-5">
+          <p class="mb-0">Q: Do I need an account?</p>
+          <p class="mb-0">
+            A: Yes, create an account and log in to access the weather
+            dashboard.
+          </p>
+        </div>
+        <div class="mx-4 p-5">
+          <p class="mb-0">Q: Can I check the weather in different cities?</p>
+          <p class="mb-0">
+            A: Yes, if the city is supported by the weather service integrated
+            into the application.
+          </p>
+        </div>
+        <div class="mx-4 p-5">
+          <p class="mb-0">Q: Is the app free?</p>
+          <p class="mb-0">
+            A: Yes, only Identification and Authentication required.
+          </p>
+        </div>
+        <div class="mx-4 p-5">
+          <p class="mb-0">Q: Where does the weather information come from?</p>
+          <p class="mb-0">
+            A: The weather information are gotten from the OpenWeatherMap.
+          </p>
+        </div>
+      </div>
+      <img
+        src="image/faq.svg"
+        class="img-fluid object-fit-contain"
+        style="width: 400px; height: 500px"
+      />
+    </div>
+    <div class="mx-4" id="about">
+      <h2 class="text-center mb-8 text-4xl about">About SkyCast</h2>
+      <p class="mx-4">
+        SkyCast is a weather information platform designed to help users explore
+        current weather conditions and forecasts for different loactions. Our
+        goal is to make weather information easy to understand, whether you are
+        planning your daily activities, preparing for a trip, or checking the
+        weather in another city, SkyCast heips you stay informed about the
+        conditions that may affect your plans.
+      </p>
+      <div class="d-flex align-items-center justify-content-center item">
+        <div class="mt-5" style="width: 300px">
+          <img
+            src="image/target.svg"
+            class="img-fluid object-fit-contain mb-2"
+            style="width: 60px; height: 60px"
+          />
+          <h5>Mission</h5>
+          <p>
+            Our weather platform is designed to help users explore current
+            weather conditions forecasts for supported locations through a
+            simple and user-friendly interface.
+          </p>
+        </div>
+        <div class="mt-5" style="width: 300px">
+          <img
+            src="image/globe.svg"
+            class="img-fluid object-fit-contain mb-2"
+            style="width: 60px; height: 60px"
+          />
+          <h5>Vision</h5>
+          <p>
+            To create a reliable and accessible weather platform that helps
+            people to make more informed decisions about their day.
+          </p>
+        </div>
+        <div class="mt-5" style="width: 300px">
+          <img
+            src="image/gem.svg"
+            class="img-fluid object-fit-contain mb-2"
+            style="width: 60px; height: 60px"
+          />
+          <h5>Values</h5>
+          <p>Accessibility, reliability, simplicity and innovation.</p>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="border-top border-muted-accent mt-12 position-relative">
+        <p class="mx-4 mt-4">© 2026 SkyCast. All Rights Reserved.</p>
+        <p
+          class="mt-4 position-absolute top-0 end-0 mx-12 bg-accent rounded-4 p-2 d-none top"
+        >
+          <!-- <a href="#home" class="text-decoration-none fg-white up">
+            Back to top
+          </a> -->
+          <a href="#home" class="text-decoration-none fg-white">
+            ↑
+          </a>
+        </p>
+      </div>
+    </footer>
+    <script src="bootstrap-6.0.0-alpha.1-dist/bootstrap-6.0.0-alpha.1-dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
