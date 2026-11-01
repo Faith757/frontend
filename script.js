@@ -11,7 +11,7 @@ form.addEventListener('submit', async (e) => {
     return
   }
   try {
-    const response = await fetch(`${API_URL}/weather?city=${encodeURIComponent(city)}`)
+    const response = await fetch(`${API_URL}/api/weather?city=${encodeURIComponent(city)}`)
     const data = await response.json()
 
     if (!response.ok) {
