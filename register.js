@@ -2,7 +2,7 @@ const form = document.getElementById('register-form')
 const email = document.getElementById('email')
 const password = document.getElementById('pwd')
 const confirmPassword = document.getElementById('password')
-const API_KEY = "https://backend-fa0q.onrender.com"
+const API_URL = "https://backend-fa0q.onrender.com"
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault()
@@ -13,7 +13,7 @@ form.addEventListener('submit', async (e) => {
 
     }
     try {
-        const response = await fetch(`${API_KEY}/user/registration`, {
+        const response = await fetch(`${API_URL}/registration`, {
             method: 'POST',
             headers: {
                 "content-type": "application/json",

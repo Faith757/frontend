@@ -1,5 +1,5 @@
 const loginForm = document.getElementById("login-form");
-const API_KEY = "https://backend-fa0q.onrender.com"
+const API_URL = "https://backend-fa0q.onrender.com"
 
 loginForm.addEventListener("submit", async function (e) {
     e.preventDefault();
@@ -8,7 +8,7 @@ loginForm.addEventListener("submit", async function (e) {
     const password = document.getElementById("pwd").value;
 
     try {
-        const response = await fetch(`${API_KEY}/user/login`, {
+        const response = await fetch(`${API_URL}/login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
