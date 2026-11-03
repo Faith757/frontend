@@ -45,7 +45,7 @@ form.addEventListener('submit', async (e) => {
 
 async function logout(){
   try{
-    const response = await fetch(`${API_URL}/user/login`,{
+    const response = await fetch(`${API_URL}/user/logout`,{
       method: "POST"
     })
     const data = await response.json();
