@@ -42,3 +42,19 @@ form.addEventListener('submit', async (e) => {
 
   }
 }) 
+
+async function logout(){
+  try{
+    const response = await fetch(`${API_URL}/user/login`,{
+      method: "POST"
+    })
+    const data = await response.json();
+    if(response.ok){
+      localStorage.removeItem("token");
+      alert(data.message)
+    }
+  }catch (error){
+     console.log("logout error:", error)
+  }
+
+}
