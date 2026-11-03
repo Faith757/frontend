@@ -52,6 +52,7 @@ async function logout(){
     if(response.ok){
       localStorage.removeItem("token");
       alert(data.message)
+      window.location.href = "index.html"
     }
   }catch (error){
      console.log("logout error:", error)
